@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println("End");
 
-Arrays
+//Arrays
 
         String[] students= new String[5];
         students[1]="Evas";
