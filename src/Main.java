@@ -46,26 +46,28 @@ public class Main {
 //
 //
 //        System.out.println(names.size());
-        Map<String,String> emaillist = new HashMap<>();
+//        Map<String,String> emaillist = new HashMap<>();
+//
+//        emaillist.put("Evans","evans@gmail.com");
+//        emaillist.put("ida","ida@gmail.com");
+//        emaillist.put("mum","mum@gmai.com");
+//
+//        System.out.println(emaillist.get("Evans"));
+//
+//
+//        ArrayList<Student> students = new ArrayList<>();
+//        students.add(new Student("evans",1));
+//        students.add(new Student("maina",2));
+//        students.add(new Student("kk",3));
+//        students.add(new Student("ss",4));
+//
+//        for (Student s: students){
+//            System.out.println(s.getId()+ " " + s.getName());
+//        }
 
-        emaillist.put("Evans","evans@gmail.com");
-        emaillist.put("ida","ida@gmail.com");
-        emaillist.put("mum","mum@gmai.com");
-
-        System.out.println(emaillist.get("Evans"));
-
-
-        ArrayList<Student> students = new ArrayList<>();
-        students.add(new Student("evans",1));
-        students.add(new Student("maina",2));
-        students.add(new Student("kk",3));
-        students.add(new Student("ss",4));
-
-        for (Student s: students){
-            System.out.println(s.getId()+ " " + s.getName());
-        }
-
-
+      Carinterface carinterface = new ElectricCar();
+      carinterface.start();
+      carinterface.move(100);
 
     }
 }
