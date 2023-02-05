@@ -65,9 +65,38 @@ public class Main {
 //            System.out.println(s.getId()+ " " + s.getName());
 //        }
 
-      Carinterface carinterface = new ElectricCar();
-      carinterface.start();
-      carinterface.move(100);
+//      Carinterface carinterface = new ElectricCar();
+//      carinterface.start();
+//      carinterface.move(100);
 
+        Thread  thread= new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for(int i=0;i<7;i++){
+
+                    System.out.println("Printing "+ i + " in the worker thread");
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                }
+
+            }
+        });
+
+        thread.start();
+
+        for(int i=0;i<7;i++){
+
+            System.out.println("Printing "+ i + " in the main thread");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+        }
     }
 }
